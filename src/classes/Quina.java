@@ -3,7 +3,7 @@ package classes;
 
 import java.util.ArrayList;
 
-public class MegaSena extends Loterias {
+public class Quina extends Loterias {
  
     
     //Atributos
@@ -23,7 +23,7 @@ public class MegaSena extends Loterias {
   
     @Override
     public boolean validacao(int valida) {
-        if (valida < 1 || valida > 60){
+        if (valida < 1 || valida > 80){
             return false;
         }
         return true;
