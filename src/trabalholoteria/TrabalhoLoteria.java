@@ -132,7 +132,7 @@ public class TrabalhoLoteria {
                 
                 //OPÇÃO GERAR RANDOMICOS
                 if (opc1 == 3){
-                    
+                    jogoMega.randomicos();
                 }
                 
                 //OPÇÃO ESCOLHER E TESTAR DEZENAS
@@ -217,7 +217,7 @@ public class TrabalhoLoteria {
                 
                 //OPÇÃO GERAR RANDOMICOS
                 if (opc1 == 3){
-                    
+                    jogoQuina.randomicos();
                 }
                 
                 //OPÇÃO ESCOLHER E TESTAR DEZENAS
@@ -307,7 +307,7 @@ public class TrabalhoLoteria {
                 
                 //OPÇÃO GERAR RANDOMICOS
                 if (opc1 == 3){
-                    
+                    jogoLoto.randomicos();
                 }
                 
                 //OPÇÃO ESCOLHER E TESTAR DEZENAS
