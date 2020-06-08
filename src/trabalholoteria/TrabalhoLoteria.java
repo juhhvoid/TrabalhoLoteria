@@ -2,9 +2,11 @@
 package trabalholoteria;
 
 import classes.Jogos;
+import classes.Loterias;
 import classes.Lotofacil;
 import classes.MegaSena;
 import classes.Quina;
+import factory.LoteriasFactory;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -108,7 +110,8 @@ public class TrabalhoLoteria {
             //OPÇÃO MEGA SENA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             if (opc == 1){
                 
-                MegaSena jogoMega = new MegaSena(); //TESTE!!!! AQUI DEVE SER O FACTORY
+                //MegaSena jogoMega = new MegaSena(); //TESTE!!!! AQUI DEVE SER O FACTORY
+                Loterias jogoMega = LoteriasFactory.getLoterias(opc);
                 
                 System.out.println("*****SELECIONE UMA DAS OPÇÕES*****");
                 System.out.println("1..........5 números que mais sairam.");
@@ -193,7 +196,8 @@ public class TrabalhoLoteria {
             //OPÇÃO QUINA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             if (opc == 2){
                 
-                Quina jogoQuina = new Quina(); //TESTE!!!! AQUI DEVE SER O FACTORY
+                //Quina jogoQuina = new Quina(); //TESTE!!!! AQUI DEVE SER O FACTORY
+                Loterias jogoQuina = LoteriasFactory.getLoterias(opc);
                 
                 System.out.println("*****SELECIONE UMA DAS OPÇÕES*****");
                 System.out.println("1..........5 números que mais sairam.");
@@ -283,7 +287,8 @@ public class TrabalhoLoteria {
             //OPÇÃO LOTOFACIL/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             if (opc == 3){
                 
-                Lotofacil jogoLoto = new Lotofacil(); //TESTE!!!! AQUI DEVE SER O FACTORY
+                //Lotofacil jogoLoto = new Lotofacil(); //TESTE!!!! AQUI DEVE SER O FACTORY
+                Loterias jogoLoto = LoteriasFactory.getLoterias(opc);
                 
                 System.out.println("*****SELECIONE UMA DAS OPÇÕES*****");
                 System.out.println("1..........5 números que mais sairam.");

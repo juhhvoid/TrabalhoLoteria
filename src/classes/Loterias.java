@@ -9,6 +9,12 @@ public abstract class Loterias {
     public abstract void setDezenas(int dezenas); //seta as dezenas
     public abstract int confere(ArrayList<Integer> aposta, ArrayList<Integer> jogo); //Confere o jogo do apostador
     public abstract void randomicos(); //gera numeros randomicos para o jogo
+
+    public abstract ArrayList<Integer> getDezenas();
+        
+    
+
+    
     
     
     
