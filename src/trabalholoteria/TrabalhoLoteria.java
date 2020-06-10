@@ -124,7 +124,7 @@ public class TrabalhoLoteria {
                             x++;
                         }
                     }
-                    //Collections.sort(vet);
+                 
                     jogoMega.cincoMais(vet);
                 }
 
@@ -138,7 +138,7 @@ public class TrabalhoLoteria {
                             x++;
                         }
                     }
-                    Collections.sort(vet);
+                  
                     jogoMega.cincoMenos(vet);
 
                 }
@@ -226,7 +226,7 @@ public class TrabalhoLoteria {
                             x++;
                         }
                     }
-                    Collections.sort(vet);
+              
                     jogoQuina.cincoMais(vet);
                 }
 
@@ -240,7 +240,7 @@ public class TrabalhoLoteria {
                             x++;
                         }
                     }
-                    Collections.sort(vet);
+              
                     jogoQuina.cincoMenos(vet);
 
                 }
@@ -334,7 +334,7 @@ public class TrabalhoLoteria {
                             x++;
                         }
                     }
-                    Collections.sort(vet);
+                
                     jogoLoto.cincoMais(vet);
                 }
 
@@ -348,7 +348,7 @@ public class TrabalhoLoteria {
                             x++;
                         }
                     }
-                    Collections.sort(vet);
+               
                     jogoLoto.cincoMenos(vet);
                 }
 
