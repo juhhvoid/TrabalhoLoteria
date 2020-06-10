@@ -1,31 +1,29 @@
-
 package classes;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Map;
 import java.util.Random;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Lotofacil extends Loterias {
- 
-    
+
     //Atributos
     public ArrayList<Integer> dezenas = new ArrayList();
-    
-    
+
     //Getters and Setters
-    
-      public ArrayList<Integer> getDezenas() {
+    public ArrayList<Integer> getDezenas() {
         return dezenas;
     }
 
     public void setDezenas(ArrayList<Integer> dezenas) {
         this.dezenas = dezenas;
     }
-     
-  
+
     @Override
     public boolean validacao(int valida) {
-        if (valida < 1 || valida > 25){
+        if (valida < 1 || valida > 25) {
             return false;
         }
         return true;
@@ -39,21 +37,21 @@ public class Lotofacil extends Loterias {
     @Override
     public int confere(ArrayList<Integer> aposta, ArrayList<Integer> jogo) {
         int cont = 0;
-        for(int i = 0; i < aposta.size(); i++){
-            for(int j = 0; j < jogo.size(); j++ ){
-                if (aposta.get(i) == jogo.get(j)){
+        for (int i = 0; i < aposta.size(); i++) {
+            for (int j = 0; j < jogo.size(); j++) {
+                if (aposta.get(i) == jogo.get(j)) {
                     cont++;
-                    
+
                 }
             }
         }
-        return cont;       
+        return cont;
     }
 
     @Override
     public void randomicos() {
         int find = 0;
-        int c, i = 0; 
+        int c, i = 0;
         ArrayList num = new ArrayList();
         Random rdm = new Random();
 
@@ -84,5 +82,26 @@ public class Lotofacil extends Loterias {
         System.out.println("");
     }
 
-    
+    @Override
+    public void cincoMais(ArrayList<Integer> vet) {
+        System.out.println("CINCO NUMEROS QUE MAIS SAIRAM: ");
+        vet.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
+                .sorted(Map.Entry.<Integer, Long>comparingByValue()
+                        .reversed())
+                .limit(5)
+                .forEachOrdered(e -> System.out.println("Nº " + e.getKey() + " apareceu " + e.getValue() + " vezes"));
+        System.out.println("");
+    }
+
+    @Override
+    public void cincoMenos(ArrayList<Integer> vet) {
+        System.out.println("CINCO NUMEROS QUE MENOS SAIRAM: ");
+        vet.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
+                .sorted(Map.Entry.<Integer, Long>comparingByValue()
+                )
+                .limit(5)
+                .forEachOrdered(e -> System.out.println("Nº " + e.getKey() + " apareceu " + e.getValue() + " vezes"));
+        System.out.println("");
+    }
+
 }

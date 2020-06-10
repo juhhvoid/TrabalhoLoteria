@@ -3,7 +3,10 @@ package classes;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Map;
 import java.util.Random;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Quina extends Loterias {
  
@@ -81,6 +84,28 @@ public class Quina extends Loterias {
         System.out.println("AQUI ESTÁ SEU JOGO ALEATORIO DA QUINA");
         System.out.print(num);
         System.out.println("");
+        System.out.println("");
+    }
+
+    @Override
+    public void cincoMais(ArrayList<Integer> vet) {
+        System.out.println("CINCO NUMEROS QUE MAIS SAIRAM: ");
+      vet.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
+                .sorted(Map.Entry.<Integer, Long>comparingByValue()
+                        .reversed())
+                .limit(5)
+                .forEachOrdered(e -> System.out.println("Nº " + e.getKey() + " apareceu " + e.getValue() + " vezes"));
+        System.out.println("");
+    }
+
+    @Override
+    public void cincoMenos(ArrayList<Integer> vet) {
+        System.out.println("CINCO NUMEROS QUE MENOS SAIRAM: ");
+        vet.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
+                .sorted(Map.Entry.<Integer, Long>comparingByValue()
+                        )
+                .limit(5)
+                .forEachOrdered(e -> System.out.println("Nº " + e.getKey() + " apareceu " + e.getValue() + " vezes"));
         System.out.println("");
     }
 
