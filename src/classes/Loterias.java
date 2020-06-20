@@ -2,7 +2,7 @@ package classes;
 
 import java.util.ArrayList;
 
-public abstract class Loterias {
+public interface Loterias {
 
     public abstract boolean validacao(int valida); //verifica se números digitados estão dentro dos parâmetros
 

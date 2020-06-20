@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Quina extends Loterias {
+public class Quina implements Loterias {
  
     
     //Atributos

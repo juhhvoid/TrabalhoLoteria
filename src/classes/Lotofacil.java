@@ -7,7 +7,7 @@ import java.util.Random;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Lotofacil extends Loterias {
+public class Lotofacil implements Loterias {
 
     //Atributos
     public ArrayList<Integer> dezenas = new ArrayList();

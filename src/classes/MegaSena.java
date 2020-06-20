@@ -7,7 +7,7 @@ import java.util.Random;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class MegaSena extends Loterias {
+public class MegaSena implements Loterias {
 
     //Atributos
     public ArrayList<Integer> dezenas = new ArrayList();
